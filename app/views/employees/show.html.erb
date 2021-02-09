@@ -1,0 +1,10 @@
+<h2><%= @employee.first_name %> <%= @employee.last_name %></h2>
+<h4>Alias: <%= @employee.alias %></h4>
+<h4>Title: <%= @employee.title %></h4>
+<h4>Office: <%= @employee.office %></h4>
+<h4>Owner of: <%= link_to @employee.dog.name, dog_path(@employee.dog) %></h4>
+<%= image_tag @employee.img_url, style: 'width:30vw;' %>
+<div>
+    <button><%= link_to "Edit", edit_employee_path %></button>
+    <button><%= link_to "Back", employees_path %></button>
+</div>
